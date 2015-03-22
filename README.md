@@ -85,6 +85,9 @@ part2data <- select(part1data, fcol, activity, subject)
 
 **Step 7**: Using the dataset from step 5, create a new dataset called '**part3data**'. This dataset will have activities replaced with corresponding label. In order to find label, use activity dataset '**activitydata**' created in step 3 and apply **which()** to replace activity with label. There are 6 activity so loop 6 times to replace each activity with corresponding label. Use **factor()** function to check labels for each activity to ensure it is replaced correctly. 
 ```{r}
+# create a new dataset from step 1 above
+part3data <- part1data
+
 for (i in 1:nrow(activitydata))
 {
     part3data$activity[which(part3data$activity==i)]<-as.character(activitydata[i,2])
