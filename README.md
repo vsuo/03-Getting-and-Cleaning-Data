@@ -1,17 +1,24 @@
 # Getting and Cleaning Data Course Project
 
-This purpose of this course project is to read the human actitivy recognition data, a study conducted by Universit‡ degli Studi di Genova. Via Opera Pia 11A, I-16145, Genoa, Italy. The goal of this particular excercise is to demostrate clear understanding of reading and cleaning data captured as a part of this study. The records from various experiments are provided in various files. The following files are particularly important for this course project. Please refer CodeBook.md for details on various variables 
-- 'features.txt': List of all features.
+This readme file provides detailed functionality of a R script called run_analysis.R, how all of the scripts work. This R script is written to address below questions
+* Merges the training and the test sets to create one data set.
+* Extracts only the measurements on the mean and standard deviation for each measurement. 
+* Uses descriptive activity names to name the activities in the data set
+* Appropriately labels the data set with descriptive variable names. 
+* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-- 'activity_labels.txt': Links the class labels with their activity name.
+Please refer CodeBook.md resides in the repo to get details about the files and variables used as a part of this project. 
 
-- 'train/X_train.txt': Training set.
+My approach here is to first read all the relevant files and create raw dataset. After that create tidy dataset corresponding to each part of the problem. One dataset for each part
 
-- 'train/y_train.txt': Training labels.
+Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30%)
 
-- 'test/X_test.txt': Test set.
+###Step 1: Read the files from training folder 
+    * train/subject_train.txt
+    * train/X_train.txt
+    * train/y_train.txt
 
-- 'test/y_test.txt': Test labels.
-
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-
+###Step 2: Read the files from testing folder 
+    * test/subject_train.txt
+    * test/X_train.txt
+    * test/y_train.txt
