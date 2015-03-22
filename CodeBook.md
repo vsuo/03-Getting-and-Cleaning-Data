@@ -39,9 +39,13 @@ Activity Label		1
 6	.LAYING
 6.	X_test		
 This test dataset contains feature data recorded as a part of this study. This dataset includes total of 2947 observations of 561 variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
+
 1 tBodyAcc-mean()-X 
+
 2 tBodyAcc-mean()-Y
+
 3 tBodyAcc-mean()-Z
+
 4 tBodyAcc-std()-X
 5 tBodyAcc-std()-Y
 6 tBodyAcc-std()-Z
