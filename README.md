@@ -42,7 +42,21 @@ traindata <- cbind(cbind(x_train_data, y_train_data), sub_train_data)
 
 **Step 2**: Repeat above step for reading test files
 ```{r}
+# 'train/subject_train.txt': Each row identifies the subject who performed 
+#  the activity for each window sample. Its range is from 1 to 30. 
+sub_test_data <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+sub_test_data <- rename(sub_test_data, subject = V1)
+
+#'test/X_test.txt': Test set.
+x_test_data <- read.table("./UCI HAR Dataset/test/x_test.txt")
+
+# 'test/y_test.txt': Test labels
+y_test_data <- read.table("./UCI HAR Dataset/test/y_test.txt")
+y_test_data <- rename(y_test_data, activity = V1)
+
+# test data by binding activity and subject with testing data set
 testdata <- cbind(cbind(x_test_data, y_test_data), sub_test_data)
+
 ```
 
 **Step 3**: Read activity_labels.txt file and create activity dataset called it '**activitydata**'. This will contain all 6 activities that are tracked for this study 
@@ -63,12 +77,19 @@ part1data = merge(traindata, testdata, all=TRUE)
 
 **Step 6**: Using the dataset from step 5, create a new dataset called '**part2data**'. This dataset will extracts all the measurements from step 5 which contains mean and standard deviation. In order to find the variable corresponding to mean and std, use **grep()** function to grep mean or std from fdata (feature.txt) and create a variable called fcol which contains all the columns which contains mean and std. once you have all the required column use **select()** to create a dataset from step 1 above
 ```{r}
+# using the feature dataset find the column with mean and std 
 fcol <- grep("mean|std", fdata$V2, value = FALSE)
+# create a subset of data using the column for mean and std
+part2data <- select(part1data, fcol, activity, subject)
 ```
 
 **Step 7**: Using the dataset from step 5, create a new dataset called '**part3data**'. This dataset will have activities replaced with corresponding label. In order to find label, use activity dataset '**activitydata**' created in step 3 and apply **which()** to replace activity with label. There are 6 activity so loop 6 times to replace each activity with corresponding label. Use **factor()** function to check labels for each activity to ensure it is replaced correctly. 
 ```{r}
-part3data$activity[which(part3data$activity==i)]<-as.character(activitydata[i,2])
+for (i in 1:nrow(activitydata))
+{
+    part3data$activity[which(part3data$activity==i)]<-as.character(activitydata[i,2])
+}
+factor(part3data[, 562])
 ```
 
 **Step 8**: Using the dataset from step 7, create a new dataset called '**part4data**'. This dataset will contain the descriptive variable names. The feature data from (feature.txt) is loaded in **fdata** from step 4 above. There are total 561 features in fdata. Part 4 dataset has 563 variable, one for each feature and other two for subject and activity. Add activity and subject both to the fdata to have same number of feature in fdata and part4data. 
@@ -83,6 +104,10 @@ names(part4data) <- make.names(names=f1[, 2], unique=TRUE, allow_=TRUE)
 **Step 9**: Using the dataset from step 8 (Part 4 data), create a new dataset called '**part5data**'. This tidy dataset will contain the average of each variable for each activity and each subject. Use **group_by()** function to group the dataset by activity and subject. 
 
 ```{r}
+# create a new dataset from step 4 above
+part5data <- part4data
+
+# group by activity and subject
 part5data <- group_by(part5data, activity, subject)
 ```
 After that use **summarise_each()** to summarize the result and pass variable to **mean()** to calculate the mean. 
