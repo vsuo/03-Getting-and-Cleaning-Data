@@ -29,4 +29,14 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
 
 **Step 4**: Read feature.txt file and create activity dataset. This will be 6 activities
     
-**Step 5**: now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the merge function merge both dataset. 
+**Step 5**: Now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the merge function merge both dataset. 
+
+**Step 6**:
+
+**Step 7**:
+
+**Step 8**:
+
+**Step 9**:
+
+**Step 10**:
