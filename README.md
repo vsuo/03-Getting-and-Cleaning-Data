@@ -18,6 +18,7 @@ In order to address the above questions, following steps are performed. Step 1 t
 **Step 1:** Read the files from training folder using **read.table()**:
 - Train/subject_train.txt
     - read from file and create '**sub_train_data**' dataset.
+    
 ```{r}
         sub_train_data <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 ```
