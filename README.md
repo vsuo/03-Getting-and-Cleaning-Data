@@ -13,7 +13,9 @@ My approach here is to first read all the relevant files and create raw dataset.
 
 Data is spread into two distinct datasets **1) training (~70%)** and **2) testing (~30%)**
 
-**Step 1:** Read the files from training folder using read.table():
+In order to address the above questions, following steps are performed. Step 1 to 4 are sort of presteps. Step 5 - 9  correspond to each problem
+
+**Step 1:** Read the files from training folder using **read.table()**:
 - Train/subject_train.txt
     - read from file and create '**sub_train_data**' dataset.
     - this dataset contains only one variable, give a name to this variable (called it 'subject'). The reason for giving name (instead of keeping the default V1) name to avoid conflict during merge in step 5 below.
@@ -39,7 +41,7 @@ activitydata <- read.table("./UCI HAR Dataset/activity_labels.txt", stringsAsFac
 fdata <- read.table("./UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
 ```
 
-**Step 5**: Now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the **merge()** function merge both dataset. merged dataset is called '**part1data**'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset
+**Step 5**: Now we have training and test dataset created from step 1 and 2 above. Both these datasets contains same number of observations. Using the **merge()** function merge both dataset. The merged dataset is called '**part1data**'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset.
 1 above
 ```{r}
 part1data = merge(testdata, traindata, all=TRUE)
