@@ -1,6 +1,6 @@
 # Getting and Cleaning Data Course Project
 
-This readme file provides detailed functionality of a R script called *run_analysis.R*, how all of the scripts work. This R script is written to address below questions. 
+This readme file provides detailed functionality of a R script called *run_analysis.R*, how all of the scripts work. This R script is written to address below questions from course project. 
 * **Part 1:** Merges the training and the test sets to create one data set.
 * **Part 2:** Extracts only the measurements on the mean and standard deviation for each measurement. 
 * **Part 3:** Uses descriptive activity names to name the activities in the data set
