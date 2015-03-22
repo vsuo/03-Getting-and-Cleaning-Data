@@ -13,12 +13,21 @@ My approach here is to first read all the relevant files and create raw dataset.
 
 Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30%)
 
-###Step 1: Read the files from training folder 
-    * train/subject_train.txt
-    * train/X_train.txt
-    * train/y_train.txt
+###Step 1: Read the files from testing folder using read.table() and cbind() 
+    * train/subject_train.txt 
+      + read from file
+      + give a name to variable (called it 'subject'). The reason for the name to avoid conflict during merge
+    * train/X_train.txt - 
+    * train/y_train.txt - give a name to variable as 'activity'
+    Using cbind() to create test dataset with variables from Subject, Activity and X
+###Step 2: Read the files from test folder using read.table()
+    * test/subject_test.txt
+    * test/X_test.txt
+    * test/y_test.txt
 
-###Step 2: Read the files from testing folder 
+###Step 3: Read the files from testing folder using read.table()
     * test/subject_train.txt
     * test/X_train.txt
     * test/y_train.txt
+    
+    
