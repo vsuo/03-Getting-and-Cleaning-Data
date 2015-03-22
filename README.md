@@ -19,17 +19,17 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
       + this dataset contains only one variable, give a name to this variable (called it 'subject'). The reason for giving name (instead of keeping the default V1) name to avoid conflict during merge in step 5 below. 
     * train/X_train.txt - read file and create dataset called 'x_train_data'
     * train/y_train.txt - read file and create dataset called 'y_train_data', first variable as 'activity' instead of default V1
-    * Using cbind() to create training dataset (traindata) with variables from Subject, Activity and X. Each of these dataset contain same number of observations
+    * Using cbind() to create training dataset '**traindata**' with variables from Subject, Activity and X. Each of these dataset contain same number of observations
     
 **Step 2**: Repeat above step for reading test files
 
-**Step 3**: Read activity_labels.txt file and create activity dataset called it 'activitydata'. This will contain all 6 activities that are tracked for this study 
+**Step 3**: Read activity_labels.txt file and create activity dataset called it '**activitydata**'. This will contain all 6 activities that are tracked for this study 
 
-**Step 4**: Read feature.txt file and create dataset called 'fdata'. This will contain 561 features.
+**Step 4**: Read feature.txt file and create dataset called '**fdata**'. This will contain 561 features.
     
-**Step 5**: Now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the merge function merge both dataset. merged dataset is called 'part1data'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset
+**Step 5**: Now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the **merge()** function merge both dataset. merged dataset is called '**part1data**'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset
 
-**Step 6**: using the dataset from step 5, create a new dataset called 'part2data' this dataset will extracts all the measurements from step 5 which contains mean and standard deviation. In order to find the variable corresponding to mean and std, use grep command to grep mean or std from fdata (feature.txt) and create a variable called fcol which contains all the columns which contains mean and std. once you have all the required column use select() to create a dataset from step 1 avove
+**Step 6**: using the dataset from step 5, create a new dataset called '**part2data**' this dataset will extracts all the measurements from step 5 which contains mean and standard deviation. In order to find the variable corresponding to mean and std, use **grep() function to grep mean or std from fdata (feature.txt) and create a variable called fcol which contains all the columns which contains mean and std. once you have all the required column use **select()** to create a dataset from step 1 above
 
 **Step 7**:
 
