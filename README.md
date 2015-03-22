@@ -13,7 +13,7 @@ My approach here is to first read all the relevant files and create raw dataset.
 
 Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30%)
 
-###Step 1: Read the files from training folder using read.table()  
+**Step 1:** Read the files from training folder using read.table()
     * train/subject_train.txt 
       + read from file
       + give a name to variable (called it 'subject'). The reason for the name to avoid conflict during merge
@@ -23,10 +23,10 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
     
     * Using cbind() to create training dataset (traindata) with variables from Subject, Activity and X. Each of these dataset contain same number of observations
     
-###Step 2: Repeat above step for files in testing folder
+**Step 2**: Repeat above step for files in testing folder
 
-###Step 3: Read activity_labels.txt file and create activity dataset. This will contain all 6 activities that are tracked for this study 
+**Step 3**: Read activity_labels.txt file and create activity dataset. This will contain all 6 activities that are tracked for this study 
 
-###Step 4: Read feature.txt file and create activity dataset. This will be 6 activities
+**Step 4**: Read feature.txt file and create activity dataset. This will be 6 activities
     
-###Step 5: now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the merge function merge both dataset. 
+**Step 5**: now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the merge function merge both dataset. 
