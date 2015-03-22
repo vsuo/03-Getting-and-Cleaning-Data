@@ -18,9 +18,22 @@ In order to address the above questions, following steps are performed. Step 1 t
 **Step 1:** Read the files from training folder using **read.table()**:
 - Train/subject_train.txt
     - read from file and create '**sub_train_data**' dataset.
+    ```{r}
+    sub_train_data <- read.table("./UCI HAR Dataset/train/subject_train.txt")
+    ```
     - this dataset contains only one variable, give a name to this variable (called it 'subject'). The reason for giving name (instead of keeping the default V1) name to avoid conflict during merge in step 5 below.
+    ```{r}
+  sub_train_data <- rename(sub_train_data, subject = V1)
+    ```
 - train/X_train.txt - read file and create dataset called '**x_train_data**'
+    ```{r}
+    x_train_data <- read.table("./UCI HAR Dataset/train/x_train.txt")
+    ```
 - train/y_train.txt - read file and create dataset called '**y_train_data**', rename first variable as 'activity' instead of default V1
+```{r}
+y_train_data <- read.table("./UCI HAR Dataset/train/y_train.txt")
+y_train_data <- rename(y_train_data, activity = V1)
+```
 - Using **cbind()** to create training dataset '**traindata**' with variables from Subject, Activity and X. Each of these dataset contain same number of observations
 ```{r}
 traindata <- cbind(cbind(x_train_data, y_train_data), sub_train_data)
