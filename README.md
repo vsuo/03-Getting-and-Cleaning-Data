@@ -15,8 +15,8 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
 
 **Step 1:** Read the files from training folder using read.table():
 - Train/subject_train.txt
--   + read from file and create 'sub_train_data' dataset.
--   + this dataset contains only one variable, give a name to this variable (called it 'subject'). The reason for giving name (instead of keeping the default V1) name to avoid conflict during merge in step 5 below.
+    - read from file and create 'sub_train_data' dataset.
+    - this dataset contains only one variable, give a name to this variable (called it 'subject'). The reason for giving name (instead of keeping the default V1) name to avoid conflict during merge in step 5 below.
 - train/X_train.txt - read file and create dataset called 'x_train_data'
 - train/y_train.txt - read file and create dataset called 'y_train_data', first variable as 'activity' instead of default V1
 - Using **cbind()** to create training dataset '**traindata**' with variables from Subject, Activity and X. Each of these dataset contain same number of observations
