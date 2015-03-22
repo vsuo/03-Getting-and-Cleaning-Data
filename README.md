@@ -22,6 +22,7 @@ In order to address the above questions, following steps are performed. Step 1 t
         sub_train_data <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 ```
     - this dataset contains only one variable, give a name to this variable (called it 'subject'). The reason for giving name (instead of keeping the default V1) name to avoid conflict during merge in step 5 below.
+    
 ```{r}
         sub_train_data <- rename(sub_train_data, subject = V1)
 ```
