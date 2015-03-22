@@ -1,51 +1,51 @@
 # DATA DICTIONARY - Smartphones Data Set
 
-This purpose of this course project is to read the human activity recognition data, a study conducted by Universit‡ degli Studi di Genova. Via Opera Pia 11A, I-16145, Genoa, Italy. The goal of this particular excercise is to demostrate clear understanding of reading and cleaning data captured as a part of this study. The records from various experiments are provided in various files.
+This purpose of this course project is to read the human activity recognition data, a study conducted by Universit‡ degli Studi di Genova. Via Opera Pia 11A, I-16145, Genoa, Italy. The goal of this particular excercise is to demostrate clear understanding of getting and cleaning data captured as a part of this study. The records from various experiments are provided in various files.
 
 This dataset for this project is broken into two sets 1) training data (~70%) and 2) test data (~30%). Each file and corresponding variables are described below.
 
-##1.	activity_labels
-a.	Describes 6 activities which were tracked during the experiments
-i.	1 WALKING
-ii.	2 WALKING_UPSTAIRS
-iii.3 WALKING_DOWNSTAIRS
-iv.	4 SITTING
-v.	5 STANDING
-vi.	6 LAYING
+###1.	activity_labels
+Describes 6 activities which were tracked during the experiments
+- 1 WALKING
+- 2 WALKING_UPSTAIRS
+- 3 WALKING_DOWNSTAIRS
+- 4 SITTING
+- 5 STANDING
+- 6 LAYING
 
-##2.	subject_test	1
+###2.	subject_test	1
 This dataset contains test data for 30 volunteers who participated in the series of experiments. Allowed value is number between 1 and 30. 
 This dataset contains 2947 observations of 1 variable:
 
-##3.	 subject_train	1
+###3.	 subject_train	1
 This dataset contains training data for 30 volunteers who participated in the series of experiments. Allowed value is number between 1 and 30. This dataset contains 10299 observations of 1 variable (subject)
 
-##4.	y_test		
+###4.	y_test		
 This dataset contains test data corresponding to activity label. Allowed values for this dataset is number between 1 and 6. This contains total of 2947 observations of 1 variable (activity label)
-###Activity Label		1
-1	.WALKING
-2	.WALKING_UPSTAIRS
-3	.WALKING_DOWNSTAIRS
-4	.SITTING
-5	.STANDING
-6	.LAYING
+- **Activity Label**		1
+    - 1	.WALKING
+    - 2	.WALKING_UPSTAIRS
+    - 3	.WALKING_DOWNSTAIRS
+    - 4	.SITTING
+    - 5	.STANDING
+    - 6	.LAYING
 
-##5.	y_train		
-This dataset contains training data corresponding to activity label. Allowed values for this dataset is number between 1 and ##6. This contains total of 10299 observations of 1 variable (activity label)
-###Activity Label		1
-1	.WALKING
-2	.WALKING_UPSTAIRS
-3	.WALKING_DOWNSTAIRS
-4	.SITTING
-5	.STANDING
-6	.LAYING
+###5.	y_train		
+This dataset contains training data corresponding to activity label. Allowed values for this dataset is number between 1 and This contains total of 10299 observations of 1 variable (activity label)
+- **Activity Label**		1
+    - 1	.WALKING
+    - 2	.WALKING_UPSTAIRS
+    - 3	.WALKING_DOWNSTAIRS
+    - 4	.SITTING
+    - 5	.STANDING
+    - 6	.LAYING
 
-##7.	X_test		
-This test dataset contains feature data recorded as a part of this study. This dataset includes total of 2947 observations of 561 variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
+###6.	X_train		
+This **train** dataset contains feature data recorded as a part of this study. This dataset includes total of **10299** observations of **561** variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
-##8.	X_train		
-This test dataset contains feature data recorded as a part of this study. This dataset includes total of 10299 observations of 561 variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
+###7.	X_test		
+This **test** dataset contains feature data recorded as a part of this study. This dataset includes total of **2947** observations of **561** variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
 
 tBodyAcc-mean()-X
 
