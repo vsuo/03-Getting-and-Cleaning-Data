@@ -1038,6 +1038,7 @@ fBodyGyro-bandsEnergy()-49,56
 fBodyGyro-bandsEnergy()-57,64
 
 fBodyGyro-bandsEnergy()-1,16
+
 fBodyGyro-bandsEnergy()-17,32
 
 fBodyGyro-bandsEnergy()-33,48
