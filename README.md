@@ -20,13 +20,25 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
     * train/X_train.txt - read file and create dataset called 'x_train_data'
     * train/y_train.txt - read file and create dataset called 'y_train_data', first variable as 'activity' instead of default V1
     * Using cbind() to create training dataset '**traindata**' with variables from Subject, Activity and X. Each of these dataset contain same number of observations
-    
+```{r}
+traindata <- cbind(cbind(x_train_data, y_train_data), sub_train_data)
+```
+
 **Step 2**: Repeat above step for reading test files
+```{r}
+testdata <- cbind(cbind(x_test_data, y_test_data), sub_test_data)
+```
 
 **Step 3**: Read activity_labels.txt file and create activity dataset called it '**activitydata**'. This will contain all 6 activities that are tracked for this study 
+```{r}
+activitydata <- read.table("./UCI HAR Dataset/activity_labels.txt", stringsAsFactors=FALSE)
+```
 
 **Step 4**: Read feature.txt file and create dataset called '**fdata**'. This will contain 561 features.
-    
+```{r}
+fdata <- read.table("./UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
+```
+
 **Step 5**: Now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the **merge()** function merge both dataset. merged dataset is called '**part1data**'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset
 1 above
 ```{r}
@@ -62,4 +74,3 @@ Ensure that each column name is unique before applying group_by(). This is done 
 names(part5data) <- make.names(names=names(part5data), unique=TRUE, allow_=TRUE)
 ```
 
-**Step 10**:
