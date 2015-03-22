@@ -36,8 +36,8 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
 **Step 8**: Using the dataset from step 7, create a new dataset called '**part4data**'. This dataset will contain the descriptive variable names. The feature data from (feature.txt) is loaded in **fdata** from step 4 above. There are total 561 features in fdata. Part 4 dataset has 563 variable, one for each feature and other two for subject and activity. Add activity and subject both to the fdata to have same number of feature in fdata and part4data. Use **names()** function to replace the name from fdata$V2 with variable name in Part 4 dataset
 
 **Step 9**: Using the dataset from step 8 (Part 4 data), create a new dataset called '**part5data**'. This tidy dataset will contain the average of each variable for each activity and each subject. Use **group_by()** function to group the dataset by activity and subject. After that use **summarise_each()** to summarize the result and pass variable to **mean()** to calculate the mean. Ensure that each column name is unique before applying group_by(). This is done to avoid conflict with column name. Use **make.names()** to make column names unique and assign unique names to Part 5 data.
-
+```{r}
 names(part5data) <- make.names(names=names(part5data), unique=TRUE, allow_=TRUE)
-
+```
 
 **Step 10**:
