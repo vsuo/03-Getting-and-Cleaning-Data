@@ -7,9 +7,9 @@ This readme file provides detailed functionality of a R script called *run_analy
 * **Part 4:** Appropriately labels the data set with descriptive variable names. 
 * **Part 5:** From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Please refer **CodeBook.md** resides in the repo to get details about the files and variables used as a part of this project. 
+Please refer **CodeBook.md** that resides in this repo to get details about the files and variables used as a part of this assignment. 
 
-My approach here is to first read all the relevant files and create raw dataset. After that create tidy dataset corresponding to each part of the problem. One dataset for each part
+My approach here is to first read all the relevant files and create raw dataset. After that create tidy dataset corresponding to each part of the problem. One dataset for each part. For example 'part1data' corresponds to Part 1 of the assignment. 
 
 Data is spread into two distinct datasets **1) training (~70%)** and **2) testing (~30%)**
 
