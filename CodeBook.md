@@ -1,4 +1,4 @@
-DATA DICTIONARY - Smartphones Data Set
+#2DATA DICTIONARY - Smartphones Data Set
 
 This dataset for this project is broken into two sets 1) training data (~70%) and 2) test data (~30%). All variables for each set is described below.
 
