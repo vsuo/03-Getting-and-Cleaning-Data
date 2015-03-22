@@ -1,11 +1,11 @@
 # Getting and Cleaning Data Course Project
 
-This readme file provides detailed functionality of a R script called *run_analysis.R*, how all of the scripts work. This R script is written to address below questions
-* Merges the training and the test sets to create one data set.
-* Extracts only the measurements on the mean and standard deviation for each measurement. 
-* Uses descriptive activity names to name the activities in the data set
-* Appropriately labels the data set with descriptive variable names. 
-* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+This readme file provides detailed functionality of a R script called *run_analysis.R*, how all of the scripts work. This R script is written to address below questions. 
+* **Part 1:** Merges the training and the test sets to create one data set.
+* **Part 2:** Extracts only the measurements on the mean and standard deviation for each measurement. 
+* **Part 3:** Uses descriptive activity names to name the activities in the data set
+* **Part 4:** Appropriately labels the data set with descriptive variable names. 
+* **Part 5:** From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Please refer **CodeBook.md** resides in the repo to get details about the files and variables used as a part of this project. 
 
@@ -29,11 +29,11 @@ Data is spread into two distinct datasets 1) training (~70%) and 2) testing (~30
     
 **Step 5**: Now we have training and test dataset created for step 1 and 2 above. Both these datasets contains same number of observations. Using the **merge()** function merge both dataset. merged dataset is called '**part1data**'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset
 
-**Step 6**: using the dataset from step 5, create a new dataset called '**part2data**' this dataset will extracts all the measurements from step 5 which contains mean and standard deviation. In order to find the variable corresponding to mean and std, use **grep() function to grep mean or std from fdata (feature.txt) and create a variable called fcol which contains all the columns which contains mean and std. once you have all the required column use **select()** to create a dataset from step 1 above
+**Step 6**: Using the dataset from step 5, create a new dataset called '**part2data**'. This dataset will extracts all the measurements from step 5 which contains mean and standard deviation. In order to find the variable corresponding to mean and std, use **grep()** function to grep mean or std from fdata (feature.txt) and create a variable called fcol which contains all the columns which contains mean and std. once you have all the required column use **select()** to create a dataset from step 1 above
 
-**Step 7**:
+**Step 7**: Using the dataset from step 5, create a new dataset called '**part3data**'. This dataset will have activities replaced with corresponding label. In order to find label, use activity dataset '**activitydata**' created in step 3 and apply **which()** to replace activity with label. There are 6 activity so loop 6 times to replace each activity with corresponding label. Use **factor()** function to check labels for each activity to ensure it is replaced correctly. 
 
-**Step 8**:
+**Step 8**: Using the dataset from step 7, create a new dataset called '**part4data**'. This 
 
 **Step 9**:
 
