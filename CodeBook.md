@@ -2,7 +2,7 @@
 
 This dataset for this project is broken into two sets 1) training data (~70%) and 2) test data (~30%). All variables for each set is described below.
 
-1.	activity_labels
+##1.	activity_labels
 a.	Describes 6 activities which were tracked during the experiments
 i.	1 WALKING
 ii.	2 WALKING_UPSTAIRS
@@ -11,16 +11,16 @@ iv.	4 SITTING
 v.	5 STANDING
 vi.	6 LAYING
 
-2.	subject_test	1
+##2.	subject_test	1
 This dataset contains test data for 30 volunteers who participated in the series of experiments. Allowed value is number between 1 and 30. 
 This dataset contains 2947 observations of 1 variable:
 
-3.	 subject_train	1
+##3.	 subject_train	1
 This dataset contains training data for 30 volunteers who participated in the series of experiments. Allowed value is number between 1 and 30. This dataset contains 10299 observations of 1 variable (subject)
 
-4.	y_test		
+##4.	y_test		
 This dataset contains test data corresponding to activity label. Allowed values for this dataset is number between 1 and 6. This contains total of 2947 observations of 1 variable (activity label)
-Activity Label		1
+###Activity Label		1
 1	.WALKING
 2	.WALKING_UPSTAIRS
 3	.WALKING_DOWNSTAIRS
@@ -28,9 +28,9 @@ Activity Label		1
 5	.STANDING
 6	.LAYING
 
-5.	y_train		
-This dataset contains training data corresponding to activity label. Allowed values for this dataset is number between 1 and 6. This contains total of 10299 observations of 1 variable (activity label)
-Activity Label		1
+##5.	y_train		
+This dataset contains training data corresponding to activity label. Allowed values for this dataset is number between 1 and ##6. This contains total of 10299 observations of 1 variable (activity label)
+###Activity Label		1
 1	.WALKING
 2	.WALKING_UPSTAIRS
 3	.WALKING_DOWNSTAIRS
@@ -38,11 +38,11 @@ Activity Label		1
 5	.STANDING
 6	.LAYING
 
-6.	X_test		
+##7.	X_test		
 This test dataset contains feature data recorded as a part of this study. This dataset includes total of 2947 observations of 561 variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
 
 
-7.	X_train		
+##8.	X_train		
 This test dataset contains feature data recorded as a part of this study. This dataset includes total of 10299 observations of 561 variables (feature). All feature of this dataset are list below. The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
 
 tBodyAcc-mean()-X
