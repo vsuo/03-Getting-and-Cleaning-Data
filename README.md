@@ -44,7 +44,7 @@ fdata <- read.table("./UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
 **Step 5**: Now we have training and test dataset created from step 1 and 2 above. Both these datasets contains same number of observations. Using the **merge()** function merge both dataset. The merged dataset is called '**part1data**'. This is first part of the given excercise. Step 1 to 4 are prestep to create merge dataset.
 1 above
 ```{r}
-part1data = merge(testdata, traindata, all=TRUE)
+part1data = merge(traindata, testdata, all=TRUE)
 ```
 
 **Step 6**: Using the dataset from step 5, create a new dataset called '**part2data**'. This dataset will extracts all the measurements from step 5 which contains mean and standard deviation. In order to find the variable corresponding to mean and std, use **grep()** function to grep mean or std from fdata (feature.txt) and create a variable called fcol which contains all the columns which contains mean and std. once you have all the required column use **select()** to create a dataset from step 1 above
@@ -57,9 +57,13 @@ fcol <- grep("mean|std", fdata$V2, value = FALSE)
 part3data$activity[which(part3data$activity==i)]<-as.character(activitydata[i,2])
 ```
 
-**Step 8**: Using the dataset from step 7, create a new dataset called '**part4data**'. This dataset will contain the descriptive variable names. The feature data from (feature.txt) is loaded in **fdata** from step 4 above. There are total 561 features in fdata. Part 4 dataset has 563 variable, one for each feature and other two for subject and activity. Add activity and subject both to the fdata to have same number of feature in fdata and part4data. Use **names()** function to replace the name from fdata$V2 with variable name in Part 4 dataset
+**Step 8**: Using the dataset from step 7, create a new dataset called '**part4data**'. This dataset will contain the descriptive variable names. The feature data from (feature.txt) is loaded in **fdata** from step 4 above. There are total 561 features in fdata. Part 4 dataset has 563 variable, one for each feature and other two for subject and activity. Add activity and subject both to the fdata to have same number of feature in fdata and part4data. 
 ```{r}
-names(part4data)<- fdata[, 2]
+f1<- fdata;f1 <- rbind(f1, c(562, "activity")); f1 <- rbind(f1, c(563, "subject"))
+```
+Use **names()** function to replace the name from fdata$V2 with variable name in Part 4 dataset. Ensure that each column name is unique. This is done to avoid conflict with column name. Use **make.names()** to make column names unique and assign unique names to Part 4 data.
+```{r}
+names(part4data) <- make.names(names=f1[, 2], unique=TRUE, allow_=TRUE)
 ```
 
 **Step 9**: Using the dataset from step 8 (Part 4 data), create a new dataset called '**part5data**'. This tidy dataset will contain the average of each variable for each activity and each subject. Use **group_by()** function to group the dataset by activity and subject. 
@@ -71,8 +75,5 @@ After that use **summarise_each()** to summarize the result and pass variable to
 ```{r}
 part5data<- summarise_each(part5data, funs(mean), 1:561)
 ```
-Ensure that each column name is unique before applying group_by(). This is done to avoid conflict with column name. Use **make.names()** to make column names unique and assign unique names to Part 5 data.
-```{r}
-names(part5data) <- make.names(names=names(part5data), unique=TRUE, allow_=TRUE)
-```
+
 
