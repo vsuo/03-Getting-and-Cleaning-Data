@@ -1,6 +1,8 @@
 # DATA DICTIONARY - Smartphones Data Set
 
-This dataset for this project is broken into two sets 1) training data (~70%) and 2) test data (~30%). All variables for each set is described below.
+This purpose of this course project is to read the human activity recognition data, a study conducted by Universit‡ degli Studi di Genova. Via Opera Pia 11A, I-16145, Genoa, Italy. The goal of this particular excercise is to demostrate clear understanding of reading and cleaning data captured as a part of this study. The records from various experiments are provided in various files.
+
+This dataset for this project is broken into two sets 1) training data (~70%) and 2) test data (~30%). Each file and corresponding variables are described below.
 
 ##1.	activity_labels
 a.	Describes 6 activities which were tracked during the experiments
